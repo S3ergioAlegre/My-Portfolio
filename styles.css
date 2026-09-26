@@ -1,0 +1,216 @@
+body {
+  background-image: url("Background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 80px; /* space for fixed nav */
+  max-width: 2000px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* ── NAV ── */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  gap: 30px;
+  padding: 12px 30px;
+  z-index: 999;
+  box-sizing: border-box;
+  justify-content: flex-end; /*this makes the content all the way to the right*/
+}
+
+.top-bar h2 {
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* shrinks on small screens */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* ── TITLE ── */
+h1 {
+  font-size: clamp(1.6rem, 5vw, 2.5rem); /* was hard-coded 40px */
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 5%;
+}
+
+/* ── PROFILE SECTION ── */
+.prof-back {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 40px;
+  padding: 4% 5%; /* was 20% sides — way too much on mobile */
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap; /* ← KEY FIX: stacks on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+/* ── PROFILE IMAGE ── */
+.circle-square {
+  width: min(280px, 80vw); /* max 280px, but shrinks on small screens */
+  height: auto; /* keeps aspect ratio — no hard-coded height */
+  border: 5px solid black;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── BIO TEXT ── */
+.text-intro {
+  flex: 1 1 260px; /* grows to fill space, wraps below 260px */
+  max-width: 600px;
+}
+
+.summary {
+  font-size: clamp(0.95rem, 2.2vw, 1.3rem); /* was 25px fixed */
+  width: 100%; /* was 120% — that caused overflow */
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 4%;
+  margin: 0;
+  font-weight: 100;
+}
+
+/* ── EXPERIENCE SECTION ── */
+.exp-section {
+  padding-top: 5%;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 4vw, 2.5rem); /* was 40px fixed */
+  text-align: center;
+}
+
+.exp-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; /* ← stacks cards on mobile */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.exp-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 280px; /* each card takes equal space, wraps if needed */
+  max-width: 500px;
+}
+
+/* ── EXPERIENCE IMAGES ── */
+.exp-section img {
+  width: min(280px, 70vw); /* was 400x400 fixed — the main mobile killer */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.cyber-pat,
+.dod {
+  padding: 5% 4% 5%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cyber-pat-text,
+.dod-text {
+  font-size: clamp(1.1rem, 3vw, 1.8rem); /* was 30px fixed */
+}
+
+.cyber-pat-context,
+.cyber-sent-context {
+  font-size: clamp(0.85rem, 2vw, 1.1rem); /* was 20px fixed */
+  font-style: normal;
+  border-radius: 25px;
+  margin: 5% auto 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── CERTIFICATIONS ── */
+.cert-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; /* ← wraps on mobile */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cert1 {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 40px;
+  padding: 4% 3%;
+  flex: 1 1 240px;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.cert-img {
+  width: min(240px, 60vw); /* was unconstrained */
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cert-name {
+  font-size: clamp(1rem, 2.5vw, 1.6rem); /* was 30px fixed */
+  margin-top: 8px;
+}
+
+/* ── LINKS ── */
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: red;
+  font-size: 1.3em; /* relative, not fixed 40px */
+}
+
+/* ── PARAGRAPHS IN SECTIONS ── */
+section p {
+  font-weight: 100;
+}
+.cert {
+  padding-bottom: 4%;
+
+}
+
+/*EDUCATION SECTION*/
+.education{
+  list-style-type: none;
+  flex-wrap: wrap; /* ← stacks cards on mobile */
+}

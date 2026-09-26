@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="styles.css" rel="stylesheet" />
+    <!--<script src="script.js"></script>-->
+  </head>
+  <script>
+    // Forces proper layout recalculation when returning to this page
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) {
+        // Force a reflow (repaint)
+        document.body.style.display = "none";
+        document.body.offsetHeight; // triggers reflow
+        document.body.style.display = "";
+      }
+    });
+  </script>
+  <body id="me">
+    <div class="top-bar">
+      <h2><a href="#me">About me</a></h2>
+      <h2><a href="#experience">Experience</a></h2>
+      <h2><a href="#certification">Certification</a></h2>
+      <h2><a href="#">Contact Me</a></h2>
+    </div>
+    <div>
+      <h1 class="title">Sergio Alegre</h1>
+      <div class="prof-back">
+        <div class="profile">
+          <img class="circle-square" src="ProfilePic.png" />
+          <div class="text-intro">
+            <h3 class="summary">
+              I am a hardworking and determined third-year student at John Jay
+              College, eager to expand my knowledge in the technical field. My
+              passion for technology began at an early age and has only grown
+              stronger over the years. I have participated in several
+              cybersecurity-related events that have deepened my connection to
+              the field and solidified my commitment to pursuing a career in
+              digital forensics. With persistence, curiosity, and a strong drive
+              to learn, I am dedicated to developing my skills and building a
+              career in a field I am truly passionate about.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="exp-section" id="experience">
+      <h3 class="exp-title"><u>Experience</u></h3>
+      <ul class="exp-list">
+        <li class="cyber-pat">
+          <p class="cyber-pat-text">
+            <a href="#"><b>CyberPatriot</b></a>
+          </p>
+          <img src="Cyberpatriot-logo.png" rel="cyberpatriot" />
+          <!--This is where you add what you specifically did for cyberpatriot-->
+          <p class="cyber-pat-context">
+            <strong>
+              Responsible for securing and hardening Windows and Linux systems
+              by indentifying vulnerabilities. I've collaborated in a team
+              environment to strategize and troubleshoot cybersecurity
+              challenges. Along with this i also configured and troubleshot
+              networks using Cisco Packet Tracer to simulate andf secure network
+              records accurately and efficiently</strong
+            >
+          </p>
+        </li>
+        <li class="dod">
+          <p class="dod-text">
+            <a href="#"><b>Cyber Sentinel</b></a>
+          </p>
+          <img src="cyber_sentinel.png" rel="DoD Cybersentinels" />
+          <!--This is where you add what you did for Cyber Sentinels-->
+          <p class="cyber-sent-context">
+            <strong>
+              Performed vulnerability analysis and incident response in
+              simulated cybersecureitry scenarios, applied digital forensics
+              techniques to analyze and recover compromised data. I've engaged
+              in Red/Blue Team exercises to simulate real-world cyberattack and
+              defense strategies, and with that have apllied critical thinking
+              and technical skills in timed challenges.</strong
+            >
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="cert" id="certification">
+      <h3><u>Certification</u></h3>
+      <ul class="cert-list">
+        <li class="cert1">
+          <img src="Cert.jpg" class="cert-img" />
+          <p class="cert-name">
+            <a href="https://www.credly.com/go/ecxKzhv9"
+              >Google Cybersecurity Professional Certification</a
+            >
+          </p>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
